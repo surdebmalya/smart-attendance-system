@@ -1,0 +1,42 @@
+<!-- MVP.css quickstart template: https://github.com/andybrewer/mvp/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="https://via.placeholder.com/70x70">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css"> 
+
+    <meta charset="utf-8">
+    <meta name="description" content="My description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attenmdance</title>
+</head>
+
+<body>
+    <header>
+        <br>
+        <h1>Attendance of the Students</h1>
+    </header>
+    <main>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Names</th>
+                        <th>Present / absent</th>
+                    </tr>
+                </thead>
+                {% for name, status in msgs %}
+                    <tr>
+                        <td>{{name}}</td>
+                        <td>{{status}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>
